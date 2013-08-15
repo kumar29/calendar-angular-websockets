@@ -1,0 +1,14 @@
+<!--  Login fields -->
+<div class="loginContainer">
+   <form id="login-form" ng-submit="authenticateUser();">
+	   <label for="userName">User name</label>
+	   <input id="loginField" type="text" ng-model="user.userName" title="Enter username ;" required />
+	   <label for="password">Password</label>
+	   <input id="password" type="password" ng-model="user.password" title="Enter 'password' as your password" required />
+	   
+	   <button type="submit" id="loginBtn" jqbutton="">Login</button>
+	</form>
+</div>
+
+
+

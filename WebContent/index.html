@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="Calendar">
+    
+   <head>
+     <meta charset="utf-8">
+     <title>Vacation planner - PYRAMID</title>
+     
+     <link rel="stylesheet" href="js/lib/fullcalendar-1.6.1/demos/cupertino/jquery-ui-1.10.3.custom.css" />
+     <link rel="stylesheet" href="js/lib/fullcalendar-1.6.1/fullcalendar/fullcalendar.css" />
+     <link rel="stylesheet" href="css/cal.css"/>
+     
+     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+     <script src="js/lib/fullcalendar-1.6.1/fullcalendar/fullcalendar.js"></script>
+     <script src="js/bower_components/angular-ui-calendar/src/calendar.js"></script>
+     
+     <script src="js/app.js"></script>
+     <script src="js/controllers.js"></script>
+     <script src="js/services.js"></script>
+     <script src="js/directives.js"></script>
+     <script src="js/util/utils.js"></script>
+   </head>
+    
+   <body>
+	   
+	   <div class="banner">
+	       <div class="appname"> </div>
+	       <div class="logo"> </div>
+	   </div>
+	   
+	   <div class="subBannerContainer" ng-controller="SubbannerController">
+	      <!--  Initially hidden -->
+	      <div class="loggedInUserContainer" ng-show="user.loggedIn" >
+	         <ul>
+	           <li> 
+	              <div class="loggedInUserText"> 
+	                 <a ng-click="logout()" href="">{{user.userName}}</a>
+	              </div>
+	           </li>
+	           <li>
+	              <div class="loggedInUserImage">
+	                 <img src="images/{{user.userName}}.jpeg"/>
+	              </div>      
+	           </li>
+	        </ul>
+	     </div>
+	   </div>
+	   
+	   <ng-view/>
+		
+   </body>
+    
+</html>

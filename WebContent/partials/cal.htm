@@ -1,0 +1,15 @@
+<div id="MainArea" ng-show="user.loggedIn">
+       <div id="external-events" draggable>
+	       <h4>Calendar events</h4>
+	        <div class="external-event">All day vacation</div>
+	        <div class="external-event">Vacation AM</div>
+	        <div class="external-event">Vacation PM</div>
+	        <div id="all-events">
+	            <h4>All user events</h4>
+	            <button id="allEventsBtn" ng-show="!allEvents" jqbutton ng-click="toggleEvents();">Show Pyramid Team Events</button>
+	            <button id="allEventsBtn" ng-show="allEvents" jqbutton ng-click="toggleEvents();">Hide Pyramid Team Events</button>
+	        </div>
+       </div>
+       
+       <div id="calendar" class="calendar" ng-model="eventSources" calendar="myCalendar" config="uiConfig.calendar" ui-calendar="uiConfig.calendar"></div>
+</div>
